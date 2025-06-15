@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Nhấn Nút Yêu Thương</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            background: #ffebee;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+        }
+        button {
+            padding: 12px 25px;
+            font-size: 18px;
+            background: #ff4081;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+        }
+        #message {
+            font-size: 24px;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <button id="loveButton">Nhấn vào đây</button>
+        <div id="message"></div>
+    </div>
+
+    <script>
+        const button = document.getElementById("loveButton");
+        const message = document.getElementById("message");
+        let clickCount = 0;
+
+        button.addEventListener("click", function() {
+            clickCount++;
+            if (clickCount % 2 === 1) {
+                message.textContent = "Anh yêu em ❤️";
+            } else {
+                message.textContent = "A IU  EM NHIEU VL";
+            }
+        });
+    </script>
+</body>
+</html>
